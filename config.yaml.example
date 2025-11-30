@@ -1,0 +1,65 @@
+# JARVIS Voice Assistant Configuration
+# Copy this file to config.yaml and modify as needed
+
+# Audio Settings
+audio:
+  wake_word_enabled: true
+  wake_word: "Hey JARVIS"
+  hotkey_combination: "ctrl+space"
+  microphone_device: null  # Auto-detect
+  speaker_device: null      # Auto-detect
+  sensitivity: 0.5
+  timeout_seconds: 5
+
+# AI Settings
+ai:
+  use_openai: true
+  model: "gpt-4-turbo-preview"
+  max_tokens: 500
+  temperature: 0.7
+  cache_responses: true
+  cache_ttl_hours: 1
+  offline_fallback: true
+
+# System Settings
+system:
+  allowed_applications:
+    - "Chrome"
+    - "Firefox"
+    - "VS Code"
+    - "Spotify"
+    - "Discord"
+  confirmation_required:
+    - "shutdown"
+    - "restart"
+    - "delete_files"
+    - "send_email"
+
+# Web Settings
+web:
+  default_browser: "chrome"
+  headless_mode: false
+  search_results_count: 10
+  ad_blocker_enabled: true
+
+# Media Settings
+media:
+  music_directories:
+    - "~/Music"
+    - "/Users/username/Music"
+  default_volume: 70
+  supported_formats: ["mp3", "flac", "wav", "m4a"]
+
+# Notification Settings
+notifications:
+  desktop_notifications: true
+  voice_announcements: true
+  mobile_notifications: false
+  sms_gateway_email: "1234567890@vtext.com"
+
+# Privacy Settings
+privacy:
+  log_sensitive_commands: false
+  cache_sensitive_data: false
+  require_hotkey_for_sensitive: true
+  data_retention_days: 30
